@@ -18,8 +18,12 @@ import pandas as pd
 
 #st.dataframe(dataframe.style.highlight_max(axis=0))
 
-map_data = pd.DataFrame(
+#map_data = pd.DataFrame(
     np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
     columns=['lat', 'lon'])
 
-st.map(map_data)
+#st.map(map_data)
+
+x = st.slider('x')  # 👈 this is a widget
+st.write(x, 'squared is', x * x)
+
