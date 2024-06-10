@@ -20,4 +20,6 @@ df["Month"] = df["Date"].apply(lambda x: str(x.year) + "-" + str(x.month))
 month = st.sidebar.selectbox("Mês", df["Month"].unique())
 
 df_filtered = df[df["Month"] == month]
+df_filtered
+
 
