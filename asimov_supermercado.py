@@ -13,5 +13,6 @@ st.set_page_config(layout="wide")
 
 
 df = pd.read_csv("supermarket_sales.csv", sep=";", decimal=",")
-df
+df["Date"] = pd.to_datetime(df["Date"])
+df=df.sort_values("Date")
 
